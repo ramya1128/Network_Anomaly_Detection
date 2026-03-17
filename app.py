@@ -29,7 +29,7 @@ if uploaded_file:
     predictions = model.predict(data_scaled)
     data['Predicted_Status'] = ["Normal" if x==0 else "Attack" for x in predictions]
 
-    tabs = st.tabs(["📊 Summary & KPIs", "📈 Visualizations", "🗂 Detailed Table"])
+    tabs = st.tabs(["Summary & KPIs", "Visualizations", "Detailed Table"])
     
     with tabs[0]:
         st.subheader("Summary Metrics")
